@@ -204,11 +204,11 @@ Successfully developed an interactive dashboard that:
 Retail-Sales-Analysis/
 │
 ├── SQL_Queries.sql
-├── Retail_Sales_Dashboard.pbix
+├── retail_sales_analysis.pbix
 ├── Screenshots/
 │   ├── executive.png
 │   ├── profitability_analysis.png
-│   └── product_deep_dive.png
+│   └── deep_dive.png
 └── README.md
 ```
 
