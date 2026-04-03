@@ -206,7 +206,7 @@ Retail-Sales-Analysis/
 ├── SQL_Queries.sql
 ├── Retail_Sales_Dashboard.pbix
 ├── Screenshots/
-│   ├── executive_dashboard.png
+│   ├── executive.png
 │   ├── profitability_analysis.png
 │   └── product_deep_dive.png
 └── README.md
