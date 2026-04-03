@@ -200,17 +200,7 @@ Successfully developed an interactive dashboard that:
 
 ## 🔷 Repository Structure
 
-```
-Retail-Sales-Analysis/
-│
-├── SQL_Queries.sql
-├── retail_sales_analysis.pbix
-├── Screenshots/
-│   ├── executive.png
-│   ├── profitability_analysis.png
-│   └── deep_dive.png
-└── README.md
-```
+Contains README.md, SQL scripts, Power BI files, and dashboard screenshots.
 
 ---
 
