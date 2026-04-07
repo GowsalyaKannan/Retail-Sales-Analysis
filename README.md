@@ -35,24 +35,30 @@ The dataset includes:
 
 ---
 
-## 🔷 Data Processing (MySQL)
+## 🔷 Data Processing (MySQL)  
 
-### ✅ Data Cleaning
+Key steps performed:
 
 * Checked for null values 
 * Standardized column formats
 * Handled date conversions
+* Joined multiple tables
+* Prepared dataset for analysis and visualization in Power BI
 
-### ✅ SQL Analysis
+---
 
-Created fact and dimension tables using **STAR Schema**.
-Some key SQL queries used:
+### SQL Analysis Queries
+
+### 🔹 Key KPI Queries
 
 ```sql
 -- Total Sales
 SELECT SUM(sales) AS total_sales FROM sales;
+```
 
-#Data Validation - Joins
+### 🔹 Data Validation - Joins
+
+```sql
 SELECT o.order_id,
 o.region,
 c.customer_name,
@@ -64,23 +70,35 @@ JOIN orders o ON s.order_id = o.order_id
 JOIN customers c ON o.customer_id = c.customer_id
 JOIN products p ON s.product_id = p.product_id
 LIMIT 10;
+```
 
-#sales by region
+---
+
+### 🔹 Analytical Queries
+
+**sales by region**
+
+```sql
 SELECT o.region,
 SUM(s.sales) AS total_sales
 FROM sales s
 JOIN orders o ON s.order_id = o.order_id
 GROUP BY o.region;
+```
 
-#profit by category
+**profit by category**
+
+```sql
 SELECT p.category,
 SUM(s.profit) AS total_profit
 FROM sales s
 JOIN products p ON s.product_id = p.product_id
 GROUP BY p.category;
+```
 
--- sales by month and year
-SELECT 
+**sales by month and year**
+
+``sql
 YEAR(o.order_date) AS year,
 MONTH(o.order_date) AS month,
 SUM(s.sales) AS total_sales
@@ -113,20 +131,17 @@ The MySQL database was connected to Power BI using an **ODBC connector**:
 
 ---
 
-## 🔷 DAX Measures
+## 🔷 Data Transformation (Power Query)
 
-```DAX
-Total Sales = SUM(sales[Sales])
+* Minor transformations done using **Power Query**
 
-Total Profit = SUM(sales[Profit])
-
-Profit Margin = DIVIDE([Total Profit], [Total Sales])
-
-Sales per Order = DIVIDE([Total Sales], DISTINCTCOUNT(orders[Order ID]))
+  * Checking datatypes
+  * Checking column consistency
+  * Column transformations
 
 ---
 
-## 🔷 Dashboard Features
+## 📊 Dashboard Overview
 
 ### 📊 Executive Dashboard
 
@@ -161,6 +176,20 @@ Sales per Order = DIVIDE([Total Sales], DISTINCTCOUNT(orders[Order ID]))
 * Drill-through functionality
 * Product-level analysis
 * Category performance
+
+---
+
+## 🔷 DAX Measures
+
+```DAX
+Total Sales = SUM(sales[Sales])
+
+Total Profit = SUM(sales[Profit])
+
+Profit Margin = DIVIDE([Total Profit], [Total Sales])
+
+Sales per Order = DIVIDE([Total Sales], DISTINCTCOUNT(orders[Order ID]))
+```
 
 ---
 
@@ -217,7 +246,7 @@ Successfully developed an interactive dashboard that:
 
 ### Category and Product Deep Dive
 
-![Category and Product Deep Dive](4_Screenshots/04_deep_dive.png)
+![Deep Dive](4_Screenshots/04_deep_dive.png)
 
 ---
 
@@ -240,24 +269,25 @@ Retail-Sales-Analysis/
 * Dataset
 * SQL Queries
 * Power BI Dashboard (.pbix)
-* Screenshots
+* Dashboard Screenshots
 
 ---
 
 ## 🔷 How to Use
 
-1. Clone the repository
-2. Open `.pbix` file in Power BI Desktop
-3. Ensure ODBC connection is configured
-4. Refresh data if needed
-
+1. Open SQL scripts to understand data preparation
+2. Connect Power BI to MySQL using ODBC
+3. Load dataset and refresh dashboard
+4. Explore insights using filters and visuals
+   
 ---
 
 ## 📌 Key Skills Demonstrated
 
 * Data Analysis (SQL)
+* Data Cleaning & Transformation
 * Data Visualization (Power BI)
-* KPI Development
+* KPI Development & DAX
 * Business Insight Generation
 * Dashboard Design
 
