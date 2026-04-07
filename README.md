@@ -1,35 +1,37 @@
-# 📊 Retail Sales Analysis using MySQL & Power BI
+# 📊 Retail Sales Analysis Dashboard
 
-## 🔷 Project Overview
+## 📌 Project Overview
 
-This project focuses on analyzing retail sales data to uncover key business insights related to sales performance, profitability, and customer segments. The analysis was performed using **MySQL for data querying** and **Power BI for data visualization and dashboard creation**.
-
-The goal of this project is to help stakeholders make data-driven decisions by identifying trends, high-performing areas, and improvement opportunities.
+This project analyzes retail sales data to uncover key business insights related to **revenue, profit, product performance, and regional trends**. The analysis was performed using **MySQL for data querying** and **Power BI for visualization** enabling data-driven decision-making.
 
 ---
 
-## 🔷 Tools & Technologies
+## 🎯 Business Objective
 
-* **MySQL** – Data cleaning and analysis
-* **ODBC Connector** – Database connectivity
-* **Power BI** – Data modeling and dashboard creation
-* **DAX (Data Analysis Expressions)** – Measures and calculations
+* Analyze sales and profit trends over time
+* Identify high-performing and low-performing products
+* Evaluate category-wise and regional performance
+* Provide actionable insights to improve profitability
 
 ---
 
-## 🔷 Dataset Description
+## 🛠 Tools & Technologies Used
 
-The dataset contains transactional retail data with the following key fields:
+* **MySQL** – Data extraction and analysis
+* **Power BI** – Data Modeling and Dashboard creation 
+* **DAX** – KPI calculations
+* **ODBC Connector** – Data connectivity
 
-* Order ID
-* Order Date
-* Ship Date
-* Customer ID
-* Product Category & Sub-category
-* Sales
-* Profit
-* Region
-* Segment
+---
+
+## 🗂 Dataset Details
+
+The dataset includes:
+
+* Order Date, Region, Segment
+* Product Category & Sub-Category
+* Sales, Profit, Quantity
+* Customer Information
 
 ---
 
@@ -38,8 +40,8 @@ The dataset contains transactional retail data with the following key fields:
 ### ✅ Data Cleaning
 
 * Checked for null values 
-* Removed duplicates where necessary
 * Standardized column formats
+* Handled date conversions
 
 ### ✅ SQL Analysis
 
@@ -164,20 +166,21 @@ Sales per Order = DIVIDE([Total Sales], DISTINCTCOUNT(orders[Order ID]))
 
 ## 🔷 Key Insights
 
-* Technology category generates the highest sales
-* West region shows strongest performance
+* **Technology** category generates the **highest sales**
+* **West** region shows **strongest performance**
 * Sales trend indicates steady growth over the years
-* Consumer segment contributes the largest share
+* **Consumer** segment contributes the **largest share**
 * Some sub-categories have high sales but low profitability
 
 ---
 
 ## 🔷 Business Recommendations
 
-* Focus on high-performing categories like Technology
-* Improve performance in low-performing regions
-* Optimize pricing for low-margin products
-* Expand high-demand sub-categories
+* Focus on **high-margin products** to improve profitability
+* Review pricing strategy for low-profit products
+* Optimize inventory for top-performing categories
+* Reduce losses from underperforming products
+* Target high-performing regions for expansion
 
 ---
 
@@ -198,9 +201,46 @@ Successfully developed an interactive dashboard that:
 
 ---
 
-## 🔷 Repository Structure
+## 📸 Dashboard Preview
 
-Contains README.md, SQL scripts, Power BI files, and dashboard screenshots.
+### Data Modeling
+
+![Star Schema](4_Screenshots/01_star_schema.png)
+
+### Executive Dashboard
+
+![Executive Dashboard](4_Screenshots/02_executive_dashboard.png)
+
+### Profitability Analysis
+
+![Profitability Analysis](4_Screenshots/03_profitability_analysis.png)
+
+### Category and Product Deep Dive
+
+![Category and Product Deep Dive](4_Screenshots/04_deep_dive.png)
+
+---
+
+## 📁 Project Structure
+
+```
+Retail-Sales-Analysis/
+│
+├── Dataset/
+├── SQL/
+├── PowerBI/
+├── Screenshots/
+└── README.md
+```
+
+---
+
+## 🔗 Project Files
+
+* Dataset
+* SQL Queries
+* Power BI Dashboard (.pbix)
+* Screenshots
 
 ---
 
@@ -213,16 +253,24 @@ Contains README.md, SQL scripts, Power BI files, and dashboard screenshots.
 
 ---
 
-## 🔷 Resume Highlight
+## 📌 Key Skills Demonstrated
 
-**Retail Sales Analysis Project**
-Developed an end-to-end retail analytics solution using MySQL and Power BI, implementing DAX measures and time intelligence to analyze sales trends, profitability, and regional performance.
-
----
-
-## 🔷 Author
-
-**Gowsalya**
+* Data Analysis (SQL)
+* Data Visualization (Power BI)
+* KPI Development
+* Business Insight Generation
+* Dashboard Design
 
 ---
 
+## 📬 Conclusion
+
+This project demonstrates how retail data can be transformed into actionable insights to **increase revenue, improve profit margins, and optimize product strategy**.
+
+---
+
+## 🔗 Author
+
+**Gowsalya Kannadhasan**
+LinkedIn: www.linkedin.com/in/gowsalya-kannadhasan-0a7017139
+GitHub: https://github.com/GowsalyaKannan
