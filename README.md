@@ -226,10 +226,10 @@ Successfully developed an interactive dashboard that:
 ```
 Retail-Sales-Analysis/
 │
-├── Dataset/
-├── SQL/
-├── PowerBI/
-├── Screenshots/
+├── 1_Dataset/
+├── 2_SQL/
+├── 3_PowerBI/
+├── 4_Screenshots/
 └── README.md
 ```
 
