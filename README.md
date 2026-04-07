@@ -301,6 +301,9 @@ This project demonstrates how retail data can be transformed into actionable ins
 
 ## 🔗 Author
 
-**Gowsalya Kannadhasan**
-LinkedIn: www.linkedin.com/in/gowsalya-kannadhasan-0a7017139
-GitHub: https://github.com/GowsalyaKannan
+**Gowsalya**
+
+* LinkedIn: www.linkedin.com/in/gowsalya-kannadhasan-0a7017139
+* GitHub: https://github.com/GowsalyaKannan
+
+---
